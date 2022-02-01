@@ -1,0 +1,17 @@
+# Instructions for contributors
+
+```shell
+## Download the code:
+git clone https://github.com/jasha10/fixup
+cd fixup
+
+## Set up the environmnet
+conda env create -f environment.yaml
+conda activate dev-fixup
+
+make test  # run the tests
+make lint # run the linters
+```
+
+# Philosophy
+- minimal dependencies

@@ -1,0 +1,14 @@
+---
+# This conda environment.yaml is for convenience
+# when developing the fixup package.
+name: dev-fixup
+channels:
+  - conda-forge
+dependencies:
+  - python=3.7
+  - pytest
+  - flit
+  - pip
+  - pip:
+    # editable install fixup:
+    - install -e .
