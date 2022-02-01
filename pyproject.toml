@@ -11,18 +11,19 @@ classifiers = ["License :: OSI Approved :: MIT License"]
 dynamic = ["version", "description"]
 
 dependencies = [
-  "libcst",
+  # "libcst",
+  "fixit",
 ]
 
 [project.optional-dependencies]
 test = [
-    "pytest >=2.7.3",
-    "pylint",
-    "pyflakes",
-    "mypy",
-    "pyright",
     "black",
     "isort",
+    "mypy",
+    "pyflakes",
+    "pylint",
+    "pytest",
+    # "pyright",  # should be installed via npm
 ]
 # doc = ["sphinx"]
 
@@ -31,3 +32,6 @@ fixup = "fixup:main"
 
 [tool.pytest.ini_options]
 addopts = "--import-mode=importlib -s"
+
+[tool.mypy]
+strict = true

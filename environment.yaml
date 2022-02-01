@@ -6,9 +6,15 @@ channels:
   - conda-forge
 dependencies:
   - python=3.7
-  - pytest
   - flit
   - pip
   - pip:
     # editable install fixup:
-    - install -e .
+    - -e .[test]
+  # test deps
+  - black
+  - isort
+  - mypy
+  - pyflakes
+  - pylint
+  - pytest
